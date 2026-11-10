@@ -14,6 +14,7 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<Using Include="Xunit" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Hotel.Domain\Hotel.Domain.csproj" />
