@@ -18,7 +18,7 @@ public class Client
     /// <summary>
     /// Дата рождения
     /// </summary>
-    public DateOnly BirthDate { get; set; }
+    public DateTime BirthDate { get; set; }
 
     /// <summary>
     /// Гражданство
