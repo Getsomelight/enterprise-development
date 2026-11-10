@@ -13,20 +13,20 @@ public class Booking
     /// <summary>
     /// Клиент
     /// </summary>
-    public Client Client { get; set; } = new();
+    public required Client Client { get; set; }
 
     /// <summary>
     /// Номер
     /// </summary>
-    public Room Room { get; set; } = new();
+    public required Room Room { get; set; }
 
     /// <summary>
     /// Дата заезда
     /// </summary>
-    public DateTime CheckInDate { get; set; }
+    public required DateTime CheckInDate { get; set; }
 
     /// <summary>
     /// Количество суток проживания
     /// </summary>
-    public int Nights { get; set; }
+    public required int Nights { get; set; }
 }

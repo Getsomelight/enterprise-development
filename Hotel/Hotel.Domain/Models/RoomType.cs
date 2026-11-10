@@ -15,25 +15,25 @@ public class RoomType
     /// <summary>
     /// Категория номера
     /// </summary>
-    public RoomCategory Category { get; set; }
+    public required RoomCategory Category { get; set; }
 
     /// <summary>
     /// Площадь номера в кв. м
     /// </summary>
-    public double Area { get; set; }
+    public required double Area { get; set; }
 
     /// <summary>
     /// Количество кроватей
     /// </summary>
-    public int BedCount { get; set; }
+    public required int BedCount { get; set; }
 
     /// <summary>
     /// Наличие ванны/душа
     /// </summary>
-    public bool HasBathroom { get; set; }
+    public required bool HasBathroom { get; set; }
 
     /// <summary>
     /// Стоимость проживания за сутки
     /// </summary>
-    public decimal PricePerNight { get; set; }
+    public required decimal PricePerNight { get; set; }
 }

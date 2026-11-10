@@ -8,20 +8,20 @@ public class Client
     /// <summary>
     /// Номер паспорта
     /// </summary>
-    public string PassportNumber { get; set; } = string.Empty;
+    public required string PassportNumber { get; set; }
 
     /// <summary>
     /// ФИО клиента
     /// </summary>
-    public string FullName { get; set; } = string.Empty;
+    public required string FullName { get; set; }
 
     /// <summary>
     /// Дата рождения
     /// </summary>
-    public DateTime BirthDate { get; set; }
+    public required DateTime BirthDate { get; set; }
 
     /// <summary>
     /// Гражданство
     /// </summary>
-    public string Citizenship { get; set; } = string.Empty;
+    public required string Citizenship { get; set; }
 }

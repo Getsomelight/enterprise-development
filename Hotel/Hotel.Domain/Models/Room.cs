@@ -8,20 +8,20 @@ public class Room
     /// <summary>
     /// Номер комнаты
     /// </summary>
-    public string RoomNumber { get; set; } = string.Empty;
+    public required string RoomNumber { get; set; }
 
     /// <summary>
     /// Этаж
     /// </summary>
-    public int Floor { get; set; }
+    public required int Floor { get; set; }
 
     /// <summary>
     /// Наличие балкона
     /// </summary>
-    public bool HasBalcony { get; set; }
+    public required bool HasBalcony { get; set; }
 
     /// <summary>
     /// Ссылка на тип номера
     /// </summary>
-    public RoomType Type { get; set; } = new();
+    public required RoomType Type { get; set; }
 }
