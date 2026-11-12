@@ -6,6 +6,11 @@
 public class Client
 {
     /// <summary>
+    /// Уникальный идентификатор клиента
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
     /// Номер паспорта
     /// </summary>
     public required string PassportNumber { get; set; }
