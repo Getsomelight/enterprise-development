@@ -42,23 +42,28 @@ public class ClientQueriesTests
     public void Top5ClientsByTotalSpent()
     {
         var data = new TestData();
+        var expected = new (string PassportNumber, decimal TotalSpent)[]
+        {
+            ("4519 012345", 60_000m), // Козлов: 10 суток * 6000
+            ("4515 678901", 31_500m), // Егоров: 7 суток * 4500
+            ("4512 345678", 12_400m), // Волкова: 4800 + 7600
+            ("4513 456789", 9_800m),  // Григорьев: 6600 + 3200
+            ("4516 789012", 9_000m)   // Жукова: 2 суток * 4500
+        };
 
         var result = data.Bookings
             .GroupBy(b => b.Client.PassportNumber)
             .Select(g => new
             {
+                PassportNumber = g.Key,
                 ClientName = g.First().Client.FullName,
                 TotalSpent = g.Sum(b => b.Nights * b.Room.Type.PricePerNight)
             })
             .OrderByDescending(x => x.TotalSpent)
-            .ThenBy(x => x.ClientName)
+            .ThenBy(x => x.ClientName, StringComparer.Ordinal)
             .Take(5)
             .ToList();
 
-        Assert.Equal(5, result.Count);
-        for (var i = 1; i < result.Count; i++)
-        {
-            Assert.True(result[i - 1].TotalSpent >= result[i].TotalSpent);
-        }
+        Assert.Equal(expected, result.Select(x => (x.PassportNumber, x.TotalSpent)));
     }
 }
