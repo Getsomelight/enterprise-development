@@ -28,19 +28,19 @@ public class TestData
     /// <summary>
     /// Справочник типов номеров
     /// </summary>
-    public List<RoomType> RoomTypes { get; } = new()
-    {
-        new RoomType { Id = 1, Category = RoomCategory.Economy, Area = 14, BedCount = 1, HasBathroom = true, PricePerNight = 1200m },
-        new RoomType { Id = 2, Category = RoomCategory.Standard, Area = 20, BedCount = 2, HasBathroom = true, PricePerNight = 2200m },
-        new RoomType { Id = 3, Category = RoomCategory.Luxury, Area = 35, BedCount = 2, HasBathroom = true, PricePerNight = 4500m },
-        new RoomType { Id = 4, Category = RoomCategory.Apartment, Area = 55, BedCount = 3, HasBathroom = true, PricePerNight = 7500m },
-        new RoomType { Id = 5, Category = RoomCategory.Economy, Area = 10, BedCount = 1, HasBathroom = false, PricePerNight = 800m },
-        new RoomType { Id = 6, Category = RoomCategory.Standard, Area = 24, BedCount = 2, HasBathroom = true, PricePerNight = 2800m },
-        new RoomType { Id = 7, Category = RoomCategory.Luxury, Area = 45, BedCount = 3, HasBathroom = true, PricePerNight = 6000m },
-        new RoomType { Id = 8, Category = RoomCategory.Standard, Area = 18, BedCount = 1, HasBathroom = true, PricePerNight = 1900m },
-        new RoomType { Id = 9, Category = RoomCategory.Economy, Area = 16, BedCount = 2, HasBathroom = true, PricePerNight = 1600m },
-        new RoomType { Id = 10, Category = RoomCategory.Luxury, Area = 50, BedCount = 4, HasBathroom = true, PricePerNight = 8000m }
-    };
+    public List<RoomType> RoomTypes { get; } =
+    [
+        new() { Id = 1, Category = RoomCategory.Economy, Area = 14, BedCount = 1, HasBathroom = true, PricePerNight = 1200m },
+        new() { Id = 2, Category = RoomCategory.Standard, Area = 20, BedCount = 2, HasBathroom = true, PricePerNight = 2200m },
+        new() { Id = 3, Category = RoomCategory.Luxury, Area = 35, BedCount = 2, HasBathroom = true, PricePerNight = 4500m },
+        new() { Id = 4, Category = RoomCategory.Apartment, Area = 55, BedCount = 3, HasBathroom = true, PricePerNight = 7500m },
+        new() { Id = 5, Category = RoomCategory.Economy, Area = 10, BedCount = 1, HasBathroom = true, PricePerNight = 800m },
+        new() { Id = 6, Category = RoomCategory.Standard, Area = 24, BedCount = 2, HasBathroom = true, PricePerNight = 2800m },
+        new() { Id = 7, Category = RoomCategory.Luxury, Area = 45, BedCount = 3, HasBathroom = true, PricePerNight = 6000m },
+        new() { Id = 8, Category = RoomCategory.Standard, Area = 18, BedCount = 1, HasBathroom = true, PricePerNight = 1900m },
+        new() { Id = 9, Category = RoomCategory.Economy, Area = 16, BedCount = 2, HasBathroom = true, PricePerNight = 1600m },
+        new() { Id = 10, Category = RoomCategory.Luxury, Area = 50, BedCount = 4, HasBathroom = true, PricePerNight = 8000m }
+    ];
 
     /// <summary>
     /// Комнаты, принадлежащие предопределённым категориям
