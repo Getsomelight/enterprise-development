@@ -15,6 +15,7 @@ public class RoomQueriesTests
     {
         var data = new TestData();
         var currentDate = new DateTime(2025, 3, 10);
+        string[] expectedRoomNumbers = ["101", "302"];
 
         var result = data.Bookings
             .Where(b => b.CheckInDate <= currentDate && b.CheckInDate.AddDays(b.Nights) > currentDate)
@@ -23,7 +24,7 @@ public class RoomQueriesTests
             .OrderBy(rn => rn)
             .ToList();
 
-        Assert.Equal(new[] { "101", "302" }, result);
+        Assert.Equal(expectedRoomNumbers, result);
     }
 
     /// <summary>
@@ -65,7 +66,7 @@ public class RoomQueriesTests
                      join booking in data.Bookings on room.RoomNumber equals booking.Room.RoomNumber into roomBookings
                      select new
                      {
-                         RoomNumber = room.RoomNumber,
+                         room.RoomNumber,
                          Count = roomBookings.Count()
                      };
 
