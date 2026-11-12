@@ -47,7 +47,7 @@ public class RoomQueriesTests
         Assert.Contains(result, x => x.RoomNumber == "102");
         Assert.Contains(result, x => x.RoomNumber == "201");
 
-        for (int i = 1; i < result.Count; i++)
+        for (var i = 1; i < result.Count; i++)
         {
             Assert.True(result[i - 1].Count >= result[i].Count);
         }

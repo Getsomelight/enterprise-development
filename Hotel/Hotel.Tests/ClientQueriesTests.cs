@@ -56,7 +56,7 @@ public class ClientQueriesTests
             .ToList();
 
         Assert.Equal(5, result.Count);
-        for (int i = 1; i < result.Count; i++)
+        for (var i = 1; i < result.Count; i++)
         {
             Assert.True(result[i - 1].TotalSpent >= result[i].TotalSpent);
         }
